@@ -707,3 +707,94 @@ textarea {
   padding: 12px 32px;
   justify-self: center;
 }
+
+/* Felmeddelanden under formulärfälten */
+.field-error {
+  display: block;
+  color: #b42335;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 6px;
+}
+
+.field-error:empty {
+  display: none;
+}
+
+/* Markerar fält med felaktiga uppgifter */
+input.field-invalid,
+textarea.field-invalid,
+select.field-invalid {
+  border: 2px solid #b42335;
+  background: #fffafa;
+}
+
+/* Behåller fokusmarkeringen även vid fel */
+input.field-invalid:focus,
+textarea.field-invalid:focus,
+select.field-invalid:focus {
+  outline: 2px solid #b42335;
+  outline-offset: 2px;
+}
+
+/* Meddelande om skickningen misslyckas */
+.form-status {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status-error {
+  color: #8f1d2c;
+  background: #fff0f1;
+  border: 2px solid #b42335;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+/* Visar att formuläret håller på att skickas */
+#contact-form button[type="submit"]:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* Luft mellan kontaktpanelerna */
+
+/* Kontaktpanelen till vänster och formuläret till höger */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 30px;
+  align-items: center; /* Centrerar panelerna på höjden */
+}
+
+/* Staplar panelerna på mindre skärmar */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Kompaktare informationspanel på kontaktsidan */
+.contact-box {
+  padding: 22px 28px; /* Mindre luft inuti panelen */
+}
+
+.contact-box h2 {
+  font-size: 1.7rem; /* Mindre rubrik */
+  margin-bottom: 12px;
+}
+
+.contact-box .check-list {
+  margin-top: 12px;
+  gap: 6px; /* Kortare avstånd mellan punkterna */
+}
+
+.contact-box .contact-direct {
+  margin-top: 18px;
+}
