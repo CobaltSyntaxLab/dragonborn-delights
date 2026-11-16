@@ -386,9 +386,10 @@ h2,
   align-items: center;
 }
 
+/* Tydligare paneler i ljust läge */
 .panel {
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid var(--line);
+  background: #ffffff;
+  border: 1px solid rgba(36, 53, 54, 0.18);
   border-radius: 34px;
   padding: 34px;
   box-shadow: var(--shadow);
@@ -468,6 +469,7 @@ h2,
   -webkit-text-fill-color: transparent !important;
 }
 
+/* Kontaktformulärets layout */
 .form {
   display: grid;
   gap: 14px;
@@ -484,22 +486,28 @@ label {
   color: var(--charcoal);
 }
 
+/* Tydligare formulärfält i ljust läge */
 input,
 select,
 textarea {
   width: 100%;
   margin-top: 8px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(36, 53, 54, 0.2);
   border-radius: 16px;
   padding: 14px 15px;
   font: inherit;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.86);
+  background: #f7faf9;
 }
 
 textarea {
   min-height: 170px;
   resize: vertical;
+}
+
+/* Kraftigare skugga runt kontaktformuläret */
+#contact-form {
+  box-shadow: 0 16px 45px rgba(20, 42, 43, 0.12);
 }
 
 .footer {
@@ -566,6 +574,7 @@ textarea {
   text-decoration: underline;
 }
 
+/* Responsiv layout för surfplatta och mindre skärmar */
 @media (max-width: 900px) {
   .mobile-toggle {
     display: inline-flex;
@@ -615,6 +624,7 @@ textarea {
   }
 }
 
+/* Responsiv layout för mobil */
 @media (max-width: 560px) {
   .hero {
     padding-top: 42px;
@@ -664,6 +674,7 @@ textarea {
   }
 }
 
+/* Anpassning för användare som föredrar mindre rörelse */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -676,4 +687,52 @@ textarea {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Mindre och centrerad skicka-knapp */
+#contact-form button[type="submit"] {
+  width: auto;
+  padding: 12px 32px;
+  justify-self: center;
+}
+
+/* Tydligare kantlinjer på paneler */
+.panel {
+  border: 1px solid #b7c9c7;
+  box-shadow: 0 12px 32px rgba(20, 42, 43, 0.12);
+}
+
+/* Tydligare formulärfält */
+input,
+select,
+textarea {
+  border: 1.5px solid #9aafad;
+  background: #f7faf9;
+}
+
+/* Turkos markering när ett formulärfält används */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #0d6f6d;
+  outline-offset: 2px;
+  border-color: #0d6f6d;
+}
+
+/* Tydligare kort på övriga sidor */
+.card,
+.project-card {
+  border: 1px solid #b7c9c7;
+  box-shadow: 0 10px 28px rgba(20, 42, 43, 0.1);
+}
+
+/* Tydligare avgränsning under navigeringen */
+.site-header {
+  border-bottom: 1px solid #b7c9c7;
+}
+
+/* Tydligare ram runt stora bilder */
+.banner-strip img,
+.hero-card {
+  border: 1px solid #b7c9c7;
 }
